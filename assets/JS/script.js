@@ -1,42 +1,36 @@
 var currentHour = parseInt(moment().format('H'))
 
 var textInput = {
-  task: {
-  9: "",
-  10: "",
-  11: "",
-  12: "",
-  13: "",
-  14: "",
-  15: "",
-  16: "",
-  17: "",
+    task: {
+    9: "",
+    10: "",
+    11: "",
+    12: "",
+    13: "",
+    14: "",
+    15: "",
+    16: "",
+    17: "",
   },
 };
 
-
+ // save in localStorage
 $(document).ready(function() {
     $('.saveBtn').on('click', function() {
-        var time = $(this).val()
-        console.log(time)
-      })
-
+        var time = $(this).attr("id")
+        
       // get time and text values
       
 
-
-      // save in localStorage
-      $(".saveBtn").click(function (){
-        // let time = $(this).parent().attr("id")
-        // let task = $("#" + time).children()[1].value;
-
-        //   time = parseInt(time.replace("hour-", ""));
-
-        //   updateLocalStorage();
-        console.log("buttonclicked")
-      });
+      // updateLocalStorage();
+      updateLocalStorage();
      
-      
+    });
+
+    function updateLocalStorage() {
+      localStorage.clear();
+      localStorage.setItem("taskInput", JSON.stringify(taskInput));
+    }
       // Timeout to remove 'show' class after 5 seconds
    
 
@@ -44,7 +38,7 @@ $(document).ready(function() {
       // get current number of hours
       
       
-      // loop over time blocks
+      // loop over time blocks + color code 
       console.log(currentHour)
       for(var i=9; i<18; i++) {
 
