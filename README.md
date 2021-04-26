@@ -11,6 +11,10 @@ This is a simple calendar application that allows a user to save events for each
 * JQuery
 * Moment
 
+## Website
+https://seveba.github.io/work-day-scheduler/
+
+
 ## Contribution
 Made by Seve Barrutia
 
